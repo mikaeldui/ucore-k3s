@@ -27,7 +27,6 @@ modules:
         - starship
     remove:
       packages:
-        - firewalld
         - cockpit-podman
         - docker-buildx
         - docker-compose
