@@ -33,7 +33,7 @@ modules:
         
   - type: script
     env:
-      INSTALL_K3S_BIN_DIR: "/var/usrlocal/"
+      INSTALL_K3S_BIN_DIR: "/var/usrlocal"
     scripts:
       - k3s-install.sh
 
