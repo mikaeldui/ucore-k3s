@@ -1146,7 +1146,6 @@ eval set -- $(escape "${INSTALL_K3S_EXEC}") $(quote "$@")
 
 # --- run the install process --
 {
-	# Skip steps that shouldn't be run when creating the image
 
     verify_system
     setup_env "$@"
@@ -1155,13 +1154,10 @@ eval set -- $(escape "${INSTALL_K3S_EXEC}") $(quote "$@")
     create_symlinks
     create_killall
     create_uninstall
+
+	# Skip steps that shouldn't be run when creating the image
     # systemd_disable
     # create_env_file
     # create_service_file
     # service_enable_and_start
-
-	# Skip downloading ever again.
-	echo "INSTALL_K3S_BIN_DIR_READ_ONLY=true" >> /etc/environment
-	echo "INSTALL_K3S_SKIP_DOWNLOAD=true" >> /etc/environment
-	echo "INSTALL_K3S_SKIP_SELINUX_RPM" >> /etc/environment
 }
