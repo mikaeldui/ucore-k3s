@@ -33,14 +33,14 @@ modules:
         
   - type: script
     env:
-      INSTALL_K3S_BIN_DIR: "/var/usrlocal"/"
+      INSTALL_K3S_BIN_DIR: "/var/usrlocal/"
     scripts:
-    - k3s-install.sh
+      - k3s-install.sh
 
   # Configure future invocations of the K3s install script.
   - type: script
     snippets:
-    - "echo \"INSTALL_K3S_BIN_DIR_READ_ONLY=true\" >> /etc/environment"
+      - "echo \"INSTALL_K3S_BIN_DIR_READ_ONLY=true\" >> /etc/environment"
 	  - "echo \"INSTALL_K3S_SKIP_DOWNLOAD=true\" >> /etc/environment"
 	  - "echo \"INSTALL_K3S_SKIP_SELINUX_RPM\" >> /etc/environment"
 
