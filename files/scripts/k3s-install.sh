@@ -1,8 +1,6 @@
 #!/bin/sh
-set -e
 set -o noglob
-
-set -euo pipefail
+set -eo pipefail
 
 # Usage:
 #   curl ... | ENV_VAR=... sh -
