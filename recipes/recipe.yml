@@ -28,7 +28,6 @@ modules:
     remove:
       packages:
         - firewalld
-        - podman
         - cockpit-podman
         - docker-buildx
         - docker-compose
