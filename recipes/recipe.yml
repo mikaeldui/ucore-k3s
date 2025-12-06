@@ -37,11 +37,4 @@ modules:
     scripts:
       - k3s-install.sh
 
-  # Configure future invocations of the K3s install script.
-  - type: script
-    snippets:
-      - "echo \"INSTALL_K3S_BIN_DIR_READ_ONLY=true\" >> /etc/environment"
-	  - "echo \"INSTALL_K3S_SKIP_DOWNLOAD=true\" >> /etc/environment"
-	  - "echo \"INSTALL_K3S_SKIP_SELINUX_RPM\" >> /etc/environment"
-
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
