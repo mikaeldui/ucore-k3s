@@ -1160,4 +1160,9 @@ eval set -- $(escape "${INSTALL_K3S_EXEC}") $(quote "$@")
     # create_env_file
     # create_service_file
     # service_enable_and_start
+
+	# Prevent re-installation	
+    echo "INSTALL_K3S_BIN_DIR_READ_ONLY=true" >> /etc/environment
+	echo "INSTALL_K3S_SKIP_DOWNLOAD=true" >> /etc/environment
+	echo "INSTALL_K3S_SKIP_SELINUX_RPM" >> /etc/environment
 }
