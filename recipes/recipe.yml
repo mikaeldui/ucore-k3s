@@ -25,6 +25,7 @@ modules:
       packages:
         - micro
         - starship
+        - container-selinux
     remove:
       packages:
         - cockpit-podman
